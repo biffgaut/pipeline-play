@@ -10,7 +10,7 @@ export class PipelinePlayStack extends Stack {
       synth: new pl.ShellStep('Synth', {
         // Use a connection created using the AWS console to authenticate to GitHub
         // Other sources are available.
-        input: pl.CodePipelineSource.gitHub('biffgaut/test-app', 'release', {
+        input: pl.CodePipelineSource.gitHub('biffgaut/pipeline-play', 'release', {
           // This is optional
           authentication: SecretValue.secretsManager('github-pipeline-token'),
         }),
